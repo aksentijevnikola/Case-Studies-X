@@ -1,0 +1,93 @@
+$break-mobile: (max-width : 767px);
+$break-tablet: (max-width : 991px);
+.showcase{
+    width: 80%;
+    height: 50vh;
+    margin: 20px auto ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #5E5AF5;
+
+    @media #{$break-tablet} {
+        width: 90%;
+    }
+    @media #{$break-mobile} {
+        width: 95%;
+        height: calc(100vh - 160px);
+    }
+    p {
+        color: white;
+        text-align: center;
+    }
+    .showcase-title {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    form {
+        width: 500px;
+        @media (max-width: 602px) {
+            width: 100%;
+        }
+        @media (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .showcase-input {
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px 0 0 5px;
+        background-color: #4747CD;
+        color: white;
+        outline: none;
+        width: calc(100% - 107.47px);
+        font-size: 1.5rem;
+        &::placeholder {
+            color: whitesmoke;
+        }
+        @media (max-width: 450px) {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    
+    .showcase-btn {
+        padding: 10px 12px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #222222;
+        transition: all 0.1s ease-in-out;
+        &:active {
+            color: white;
+            background-color: #4747CD;
+        }
+        @media (max-width: 450px) {
+            width: fit-content;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    }
+    .showcase-caption {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    :first-child {
+        margin: 0;
+    }
+    .showcase-title:nth-child(2){
+        margin: 12px 0;
+    }
+    
+
+}
+@media (max-width: 1185px) {
+    .showcase {
+        padding: 0 20px;
+    }
+}
