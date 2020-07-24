@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className='navbar-brainster'>
             <div className="navbar-wrapper">
                 <Link to='/' className='navbar-logo'>
-                    <img src="./img/brainster_space_logo.svg" alt="" />
+                    <img src="/img/brainster_space_logo.svg" alt="" />
                 </Link>
                 <div className='navbar-nav'>
                     <aside className='nav-link'>Академии</aside>

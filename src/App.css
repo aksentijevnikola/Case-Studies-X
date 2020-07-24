@@ -47,5 +47,11 @@ ul {
 
 .App{
     width: 100%;
-    background-color: #F6F7FB;
+    background-color: #F1F1F1;
+}
+.loading-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
