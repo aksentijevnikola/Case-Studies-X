@@ -35,10 +35,11 @@ $break-tablet: (max-width : 991px);
             color: white;
             background-color: #5E5AF5;
             padding: 10px 15px;
+            border: none;
             border-radius: 40px;
             transition   : all 0.2s ease-in-out;
             &:hover{
-                background-color: gray;
+                background-color: #0e0e0e;
                 opacity: 0.7;
             }
 
@@ -46,6 +47,10 @@ $break-tablet: (max-width : 991px);
                 margin: 0;
             }
            
+        }
+        .active-filter {
+            background-color: #0e0e0e;
+            opacity: 0.7;
         }
     }
     .lectures-menu{

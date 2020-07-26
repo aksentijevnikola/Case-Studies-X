@@ -325,7 +325,58 @@ export const Provider = (props) => {
             ]
         }
     ];
+    const filterButtons = [
+        {
+            id: 1,
+            label: `СИТЕ`
+        },
+        {
+            id: 2,
+            label: `ДИЗАЈН`
+        },
+        {
+            id: 3,
+            label: `МАРКЕТИНГ`
+        },
+        {
+            id: 4,
+            label: `ПРОГРАМИРАЊЕ`
+        },
+        {
+            id: 5,
+            label: `БИЗНИС`
+        },
+        {
+            id: 6,
+            label: `UX/UI`
+        },
+        {
+            id: 7,
+            label: `DATA SCIENCE`
+        }
+    ];
+    const[lecturesFilter, setLecturesFilter] = useState({
+        activeBtn: 'СИТЕ',
+        active: true,
+        activeCard: null,
+    });
     
+    let toggleLecturesFilter = (e) => {
+        if(e.target.value === lecturesFilter.activeBtn){
+            setLecturesFilter({
+                activeBtn: 'СИТЕ',
+                active: true,
+                activeCard: null
+            })
+        } else{
+            setLecturesFilter({
+                activeBtn: e.target.value,
+                active: true,
+                activeCard: initialCards.filter(card => card.title.toUpperCase() === e.target.value)
+            })
+            
+        }
+    }
     const [currentCollection, setCurrentCollection] = useState({});
 
     const createCollection = (linkUrl, isUrl = false) => {
@@ -338,7 +389,11 @@ export const Provider = (props) => {
         collections,
         currentCollection, 
         setCurrentCollection,
-        createCollection
+        createCollection,
+        filterButtons,
+        toggleLecturesFilter,
+        lecturesFilter,
+        setLecturesFilter
     }
     return(
         <Context.Provider value={CardsContext}>
