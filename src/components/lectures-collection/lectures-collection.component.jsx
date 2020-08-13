@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './lectures-collection.style.scss';
 import { CardsContext } from '../../context/Context';
-import CollectionCard from '../collection-card/collection-card.component';
+import CollectionCard from './collection-card/collection-card.component';
 
 
 

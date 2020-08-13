@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.style.scss';
-
+import {CardsContext} from '../../context/Context'
+import { useContext } from 'react';
 
 
 const Navbar = () => {
+    const {setToggleForm} = useContext(CardsContext)
     return (
         <div className='navbar-brainster'>
             <div className="navbar-wrapper">
@@ -16,7 +18,7 @@ const Navbar = () => {
                     <aside className='nav-link'>Вебинари</aside>
                     <aside className='nav-link'>Тест за кариера</aside>
                     <aside className='nav-link'>Блог</aside>
-                    <button className='join-btn'>Пријави се</button>
+                    <button className='join-btn' onClick={() => setToggleForm(true)}>Пријави се</button>
                     <div className="openBtn">
                         <span className="bar bar-1 bar-1-x"></span>
                         <span className="bar bar-2 bar-2-x"></span>

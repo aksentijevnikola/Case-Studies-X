@@ -1,14 +1,18 @@
 import React, { useContext} from 'react';
 import './lectures.style.scss';
 import { CardsContext } from '../../context/Context'
-import CategoryCard from '../category-card/category-card.component';
+import CategoryCard from './category-card/category-card.component';
+import ToggleButton from '../toggle-button/toggle-button.component';
 const Lectures = () => {
     const { initialCards, filterButtons, toggleLecturesFilter, lecturesFilter} = useContext(CardsContext)
 
     return (  
     
         <div className='lectures'>
-            <p className='lectures-title'>Филтрирај по категорија</p>
+            <div>
+                <p className='lectures-title'>Филтрирај по категорија</p>
+                <ToggleButton className='toggle-button'/>    
+            </div>
             <div className='lectures-filters'>
                 {filterButtons.map(button => {
                     return(

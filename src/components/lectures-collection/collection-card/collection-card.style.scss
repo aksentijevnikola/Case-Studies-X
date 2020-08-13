@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+}
+.collection-card {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    .collection-card-title {
+        margin-bottom: 10px;
+        color: #222222;
+        font-size: 2rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        @media (max-width: 1196px) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .lecture-number {
+            color: #5E5AF5;
+            font-weight: bold;
+        }
+        .lecture-date {
+            background-color: #ffe799;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #593d00;
+            padding: 2.5px 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 10px;
+            @media (max-width: 1196px) {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    }
+    .collection-card-desc {
+        font-size: 1.5rem;
+        color: #444444;
+    }
+    
+}

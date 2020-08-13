@@ -361,7 +361,7 @@ export const Provider = (props) => {
         activeCard: null,
     });
     
-    let toggleLecturesFilter = (e) => {
+    const toggleLecturesFilter = (e) => {
         if(e.target.value === lecturesFilter.activeBtn){
             setLecturesFilter({
                 activeBtn: 'СИТЕ',
@@ -377,6 +377,7 @@ export const Provider = (props) => {
             
         }
     }
+
     const [currentCollection, setCurrentCollection] = useState({});
 
     const createCollection = (linkUrl, isUrl = false) => {
@@ -384,6 +385,9 @@ export const Provider = (props) => {
         setCurrentCollection(newCollection);
     }
     
+    const [toggleState, setToggleState] = useState(true);
+    const [toggleForm, setToggleForm] = useState(false);
+
     const CardsContext = {
         initialCards,
         collections,
@@ -393,7 +397,11 @@ export const Provider = (props) => {
         filterButtons,
         toggleLecturesFilter,
         lecturesFilter,
-        setLecturesFilter
+        setLecturesFilter,
+        toggleState,
+        setToggleState,
+        toggleForm,
+        setToggleForm
     }
     return(
         <Context.Provider value={CardsContext}>

@@ -2,7 +2,8 @@ $break-mobile: (max-width : 767px);
 $break-tablet: (max-width : 991px);
 .lectures {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
+    position: relative;
     @media #{$break-tablet} {
         width: 90%;
     }
