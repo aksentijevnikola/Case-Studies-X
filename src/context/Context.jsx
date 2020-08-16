@@ -355,11 +355,6 @@ export const Provider = (props) => {
             label: `DATA SCIENCE`
         }
     ];
-    const[lecturesFilter, setLecturesFilter] = useState({
-        activeBtn: 'СИТЕ',
-        active: true,
-        activeCard: null,
-    });
     
     const toggleLecturesFilter = (e) => {
         if(e.target.value === lecturesFilter.activeBtn){
@@ -378,15 +373,32 @@ export const Provider = (props) => {
         }
     }
 
-    const [currentCollection, setCurrentCollection] = useState({});
-
     const createCollection = (linkUrl, isUrl = false) => {
         let newCollection = collections.find( collection => collection.id === (isUrl ? linkUrl.collectionId : linkUrl.split('/')[2]));
         setCurrentCollection(newCollection);
     }
     
+    const handleFormClose = () => {
+        setSlideUp(true)
+        setTimeout(()=> {
+            setToggleForm(false)
+            setSlideUp(false)
+        }, 400)
+    }
+    const handleShowcaseForm = (value) => {
+
+    }
+    const [lecturesFilter, setLecturesFilter] = useState({
+        activeBtn: 'СИТЕ',
+        active: true,
+        activeCard: null,
+    });
+    const [signUpEmail, setSignUpEmail] = useState('');
+    const [signUpName, setSignUpName] = useState('')
+    const [slideUp, setSlideUp] = useState(false);
     const [toggleState, setToggleState] = useState(true);
     const [toggleForm, setToggleForm] = useState(false);
+    const [currentCollection, setCurrentCollection] = useState({});
 
     const CardsContext = {
         initialCards,
@@ -401,7 +413,15 @@ export const Provider = (props) => {
         toggleState,
         setToggleState,
         toggleForm,
-        setToggleForm
+        setToggleForm,
+        slideUp,
+        setSlideUp,
+        handleFormClose,
+        signUpName,
+        setSignUpName,
+        signUpEmail,
+        setSignUpEmail
+
     }
     return(
         <Context.Provider value={CardsContext}>

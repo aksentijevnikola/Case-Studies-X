@@ -24,11 +24,10 @@ const LecturesCollection = ({ match }) => {
                 <div className='lectures-info'>
                     <p className='lectures-info-title'>{currentCollection.title}</p>
                     <p className='lectures-info-desc'>{currentCollection.desc}</p>
-                    <a href='https://brainster.co' target='_blank' rel="noopener noreferrer" className='lectures-info-btn'>Повеќе <i class="fas fa-arrow-right"></i></a>
+                    <a href='https://brainster.co' target='_blank' rel="noopener noreferrer" className='lectures-info-btn'>Повеќе <i className="fas fa-arrow-right"></i></a>
                 </div> 
                 : "" }
             </div>
-
         </div>
 
     );

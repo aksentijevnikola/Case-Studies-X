@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.style.scss';
 import {CardsContext} from '../../context/Context'
-import { useContext } from 'react';
+
 
 
 const Navbar = () => {

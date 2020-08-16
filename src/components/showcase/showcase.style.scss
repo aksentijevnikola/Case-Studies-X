@@ -27,6 +27,7 @@ $break-tablet: (max-width : 991px);
         font-weight: bold;
     }
     form {
+        display: flex;
         width: 500px;
         @media (max-width: 602px) {
             width: 100%;
@@ -62,7 +63,9 @@ $break-tablet: (max-width : 991px);
         font-weight: bold;
         font-size: 1.5rem;
         color: #222222;
+        background-color: whitesmoke;
         transition: all 0.1s ease-in-out;
+        cursor: pointer;
         &:active {
             color: white;
             background-color: #4747CD;
